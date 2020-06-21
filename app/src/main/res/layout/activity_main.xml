@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar"
+        android:background="@color/colorPrimaryDark"
+        app:title="Shake the phone &amp; Win"
+        app:titleTextColor="@color/colorPrimary"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shake\nThe\nPhone"
+        android:textAlignment="center"
+        android:lineSpacingExtra="5dp"
+        android:id="@+id/title"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/colorAccent"
+        android:textSize="35dp"
+        android:layout_marginTop="20dp"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:id="@+id/imageView"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/golden_egg"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:id="@+id/description"
+            android:text="Shake the phone left and right"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Close"
+                android:id="@+id/close"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/drawable_button_background"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Try again"
+                android:id="@+id/tryAgain"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/drawable_button_background"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp" />
+
+        </LinearLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        app:lottie_autoPlay="true"
+        android:id="@+id/lottieOne"
+        android:visibility="gone"
+        android:layout_marginTop="-90dp"
+        app:lottie_fileName="celeb_one.json"
+        app:lottie_loop="true" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="600dp"
+        android:layout_height="600dp"
+        app:lottie_autoPlay="true"
+        android:visibility="gone"
+        android:layout_marginTop="-120dp"
+        android:id="@+id/lottieTwo"
+        app:lottie_fileName="celeb-two.json"
+        app:lottie_loop="true" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"
+        android:id="@+id/layoutPoints"
+        android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:layout_gravity="center"
+        android:id="@+id/pointsTitle"
+        android:textStyle="normal"
+        android:textColor="@color/colorAccent"
+        android:text="Congrats!.. You have won."/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="55sp"
+        android:textStyle="bold"
+        android:id="@+id/points"
+        android:textColor="@color/colorAccent"
+        android:layout_gravity="center"
+        android:text="100 points"/>
+
+    </LinearLayout>
+
+    </FrameLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

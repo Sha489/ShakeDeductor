@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ShakeDeductor</string>
+    <string name="congragulations">Congratulations</string>
+    <string name="better_luck_next_time">Sorry!.. Better luck next time</string>
+    <string name="thanksForParticipation">Thanks for your participation</string>
+    <string name="done">Done</string>
+</resources>
